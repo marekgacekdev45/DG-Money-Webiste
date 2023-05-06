@@ -1,0 +1,192 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  font-size: 62, 5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  position: sfixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 5em;
+  background-color: rebeccapurple;
+  color: yellow;
+  overflow: hidden;
+}
+
+.nav__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  margin: 0.5em 1.5em;
+}
+
+.nav__img {
+  height: 70px;
+}
+
+.nav__heading {
+  margin-left: 0.5em;
+}
+
+.nav__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__item a {
+  display: block;
+  padding: 2em 1em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.nav__item a:hover {
+  color: yellow;
+  background-color: #462269;
+}
+
+.nav .burger-btn {
+  position: absolute;
+  margin-right: 0.4em;
+  top: 0.75rem;
+  right: 1rem;
+  padding: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000px;
+  display: none;
+}
+
+.nav .burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+
+.nav .burger-btn__bars, .nav .burger-btn__bars::before, .nav .burger-btn__bars::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.nav .burger-btn__bars {
+  width: 100%;
+}
+
+.nav .burger-btn__bars:before {
+  width: 60%;
+  top: 13px;
+}
+
+.nav .burger-btn__bars:after {
+  width: 33%;
+  top: 27px;
+}
+
+.nav .burger-btn:focus {
+  outline: none;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.nav .burger-btn:hover .burger-btn__bars::after,
+.nav .burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+
+.image {
+  background-image: url("https://wallpapers.com/images/high/the-legend-of-zelda-breath-of-the-wild-happy-birthday-c09l93uo3xgmk05j.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .nav .burger-btn {
+    display: block;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__items {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    padding: 0 2em;
+  }
+  .nav__title {
+    font-size: 1rem;
+  }
+  .nav__item a {
+    padding: 1.5em 0.75em;
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
